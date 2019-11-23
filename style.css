@@ -1,0 +1,55 @@
+@tailwind base;
+
+
+#showcase h1 {
+    @apply text-3xl;
+}
+
+#showcase h2 {
+    @apply text-2xl font-bold ml-2;
+}
+
+#showcase h3 {
+    @apply text-xl font-bold pt-8;
+}
+
+#showcase a {
+    @apply text-blue-700 underline;
+}
+
+#showcase div {
+    @apply relative rounded-lg block flex-col items-center bg-gray-100 shadow-lg pl-4 pr-4 pt-6 pb-6 mt-4;
+    min-height: 16rem;
+}
+
+#showcase div img {
+    @apply float-left mr-3 w-1/4 p-1;
+}
+
+#showcase ul {
+    @apply mt-4 ml-4;
+}
+
+#showcase ul li {
+    @apply list-disc list-inside mb-1;
+}
+
+#showcase div p {
+    @apply mt-4 pl-2;
+}
+
+#showcase div p:last-child {
+    @apply mt-2;
+}
+
+#showcase div a {
+    @apply inline-flex mr-2 items-baseline mt-3 text-indigo-600;
+}
+
+#showcase div a:hover,
+div a:focus {
+    @apply text-indigo-900;
+}
+
+@tailwind components;
+@tailwind utilities;
