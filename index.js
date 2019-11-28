@@ -4,4 +4,3 @@ const style = require("./style.css")
 
 document.querySelector("#showcase").innerHTML = mainTemplate()
 
-

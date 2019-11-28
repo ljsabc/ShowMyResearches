@@ -1,16 +1,11 @@
 @tailwind base;
 
 
-#showcase h1 {
-    @apply text-3xl;
-}
-
-#showcase h2 {
-    @apply text-2xl font-bold ml-2;
-}
-
-#showcase h3 {
-    @apply text-xl font-bold pt-8;
+#showcase h1,
+#showcase h2,
+#showcase h3,
+#showcase h4 {
+    @apply text-2xl font-bold ml-2 text-left;
 }
 
 #showcase a {
@@ -47,6 +42,95 @@
 }
 
 #showcase div a:hover,
+div a:focus {
+    @apply text-indigo-900;
+}
+
+#singlePage {
+    @apply mx-auto p-6 bg-white w-8/12;
+    max-width: 1280px;
+}
+
+#singlePage h1,
+#singlePage h2,
+#singlePage h3,
+#singlePage h4 {
+    @apply text-4xl font-bold text-center;
+}
+
+#singlePage a {
+    @apply text-blue-700 underline;
+}
+
+#singlePage #details {
+    @apply mt-4 mb-4;
+}
+
+#singlePage #details p {
+    @apply text-justify leading-snug;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.95rem;
+}
+
+#singlePage #helpers pre {
+    @apply text-left bg-gray-100 leading-snug text-sm mt-2 p-2 overflow-x-auto overflow-y-hidden;
+    font-family: Consolas, monaco, monospace;
+    display: inline-flex;
+}
+
+
+#singlePage #helpers {
+}
+
+#singlePage #helpers a{
+    display: inline-flex;
+    @apply ml-0 mr-4;
+    color: #333;
+    width: 50%;
+    max-width: 200px
+}
+
+#singlePage #helpers img{
+    @apply ml-0 mt-2 shadow;
+    width: 100%;
+    display: block;
+}
+
+
+#singlePage ul {
+    @apply mt-2 text-center;
+}
+
+#singlePage ul li {
+    @apply inline-flex ml-1 text-xl;
+}
+
+#singlePage p#issue {
+    @apply text-center mt-1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#singlePage img#teaser {
+    @apply mx-auto w-8/12 mt-8 mb-4 shadow-md;
+}
+
+#singlePage ul li:after {
+    content: ", "
+}
+
+#singlePage div p {
+    @apply mt-4 pl-2;
+}
+
+#singlePage div p:last-child {
+    @apply mt-2;
+}
+
+#singlePage div a {
+    @apply inline-flex mr-2 items-baseline mt-3 text-indigo-600;
+}
+
+#singlePage div a:hover,
 div a:focus {
     @apply text-indigo-900;
 }

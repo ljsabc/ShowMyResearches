@@ -7,6 +7,7 @@ let m2p = new Markdown2Pug({linkify: false});
 function postPugFix(str){
   // fix image links for file-loader
   str = str.replace(/img\(src=(\".+"),alt=(.+)\)/g, "img(src=require($1),alt=$2)")
+  str = str.replace(/a\(href="require\(\'(.+\.html)\'\)"\)/g, "a(href=require('$1'))")
 
   return str
 }

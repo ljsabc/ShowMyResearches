@@ -6,12 +6,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  target: 'web',
+  target:"web",
   entry: {
     'index': [
       path.resolve(__dirname, './index.js')
+    ],
+    'single': [
+      path.resolve(__dirname, './singlePage/colorize.html')
     ],
   },
   output: {
@@ -44,7 +48,18 @@ module.exports = {
         loader: 'file-loader',
         options: {
           outputPath: 'assets/',
-          name: '[name].[hash].[ext]',
+          name: '[name].[ext]',
+          publicPath: 'assets',
+        }
+      }]
+    },
+    {
+      test: /.+singlePage.+\.html$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          outputPath: '/',
+          name: '[name].[ext]',
           publicPath: 'assets',
         }
       }]
@@ -69,9 +84,13 @@ module.exports = {
       filename: '[name].min.css'
     }),
     new HtmlWebpackPlugin({
-      template: "templates/publications.html"
+      template: "index.html"
     }),
     new CleanWebpackPlugin({
-    })
+    }),
+    new CopyPlugin([{
+      from: './singlePage/assets',
+      to: './assets',
+    }])
   ]
 }

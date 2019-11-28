@@ -4,7 +4,7 @@
 
 With the advances of neural networks, automatic or semi-automatic colorization of sketch become feasible and practical. We present a state-of-the-art semi-automatic (as well as automatic) colorization from line art. Our improvement is accounted by a divide-and-conquer scheme. We divide this complex colorization task into two simplier and goal-clearer subtasks, drafting and refinement.
 
-[More](Colorization.html)
+[More](require('./singlePage/colorize.html'))
 [Paper](https://mangaedt-bkt.oss-cn-shenzhen.aliyuncs.com/moekame_assets/colorize.pdf)
 [Video](https://mangaedt-bkt.oss-cn-shenzhen.aliyuncs.com/moekame_assets/colorize.mp4)
 [Github(v3)](https://github.com/lllyasviel/style2paints)
@@ -15,7 +15,7 @@ With the advances of neural networks, automatic or semi-automatic colorization o
 
 Removal of problematic screentone from manga has long been an open problem but strongly needed, as the digitization process can be significantly simpilified. It is until the mature of deep learning, we finally be able to remove the irregular, regular, arbitrarily scaled, or even pictorial screentones with a single unified solution.
 
-[More](Linelearn.html)
+[More](require('./singlePage/linelearn.html'))
 [Paper](https://mangaedt-bkt.oss-cn-shenzhen.aliyuncs.com/moekame_assets/linelearn.pdf)
 [Github](https://github.com/ljsabc/MangaLineExtraction)
 
@@ -25,7 +25,7 @@ Removal of problematic screentone from manga has long been an open problem but s
 
 Balloons are commonly used for better story telling in manga. For transcribing and manipulating balloons, it needs the artists to cut out each text balloon meticulously, and therefore it is quite labor-intensive and time-consuming. We propose an automatic approach to extract text balloons from manga images both accurately and effectively. We incorporate both *shape* and *text* properties in order to differentiate text blobs from texture blobs. We also managed to tackle the boundary issue in balloon extraction. An web application is built with this technology and has been received 20M+ characters, and counting.
 
-[More](Balloon.html)
+[More](require('./singlePage/linelearn.html'))
 [Paper](https://mangaedt-bkt.oss-cn-shenzhen.aliyuncs.com/moekame_assets/balloon.pdf)
 [Demo](https://moeka.me/mangaEditor)
 
